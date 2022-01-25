@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Proto\**" />
+    <EmbeddedResource Remove="Proto\**" />
+    <None Remove="Proto\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Protos\anime.proto" />
+    <None Remove="Protos\customer - Copy.proto" />
+    <None Remove="Protos\customer.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.25.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\anime.proto" />
+    <Protobuf Include="Protos\customer.proto" />
+  </ItemGroup>
+
+</Project>

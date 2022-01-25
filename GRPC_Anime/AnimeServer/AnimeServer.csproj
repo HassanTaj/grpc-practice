@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AnimeProto3\AnimeProto3.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Protos\" />
+  </ItemGroup>
+  
+
+  <ItemGroup>
+    <!--<Protobuf Include="..\SharedProtoFucks\customer.proto" GrpcServices="Server" Link="Protos\customer.proto" />-->
+    <Protobuf Include="..\..\SharedProtoFucks\anime.proto"  GrpcServices="Server" Link="Protos\anime.proto" />
+  </ItemGroup>
+
+</Project>
